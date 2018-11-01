@@ -1,3 +1,4 @@
-const skyAndGroundWidth = 5000;
-
-export default skyAndGroundWidth
+export default {
+  skyAndGroundWidth: 5000,
+  gameWidth: 800
+};
