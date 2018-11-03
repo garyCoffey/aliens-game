@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import PropTypes from 'prop-types';
-import { getCanvasPosition } from './utils/formulas';
+import {
+  getCanvasPosition
+} from './utils/formulas';
 import Canvas from './components/Canvas';
 
 class App extends Component {
@@ -22,12 +26,19 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <Canvas
-        angle={this.props.angle}
-        gameState={this.props.gameState}
-        startGame={this.props.startGame}
-        trackMouse={event => (this.trackMouse(event))}
+    return ( <
+      Canvas angle = {
+        this.props.angle
+      }
+      gameState = {
+        this.props.gameState
+      }
+      startGame = {
+        this.props.startGame
+      }
+      trackMouse = {
+        event => (this.trackMouse(event))
+      }
       />
     );
   }
@@ -39,6 +50,13 @@ App.propTypes = {
     started: PropTypes.bool.isRequired,
     kills: PropTypes.number.isRequired,
     lives: PropTypes.number.isRequired,
+    flyingObjects: PropTypes.arrayOf(PropTypes.shape({
+      position: PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired
+      }).isRequired,
+      id: PropTypes.number.isRequired,
+    })).isRequired,
   }).isRequired,
   moveObjects: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,

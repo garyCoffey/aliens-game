@@ -17,7 +17,7 @@ const CurrentScore = (props) => {
   );
 };
 
-CurrentScore.PropTypes = {
+CurrentScore.propTypes = {
   score: PropTypes.number.isRequired,
 };
 
