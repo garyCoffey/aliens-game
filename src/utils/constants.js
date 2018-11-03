@@ -3,7 +3,8 @@ export default {
   gameWidth: 800,
   createInterval: 1000,
   maxFlyingObjects: 4,
-  flyingObjectsStarterYAxis: -1000,
+  gameHeight: 1200,
+  flyingObjectsStarterYAxis: -1100,
   flyingObjectsStarterPositions: [
     -300,
     -150,
